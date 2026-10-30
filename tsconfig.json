@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@boost-market/shared": ["packages/shared/src/index.ts"],
+      "@boost-market/shared/*": ["packages/shared/src/*"],
+      "@boost-market/ai": ["packages/ai/src/index.ts"],
+      "@boost-market/ai/*": ["packages/ai/src/*"],
+      "@boost-market/config": ["packages/config/src/index.ts"],
+      "@boost-market/config/*": ["packages/config/src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "apps/api", "**/dist"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Enterprise Core System",
+  "description": "High-performance, scalable enterprise architecture and modular application foundation engineered for long-term reliability and millions of users.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

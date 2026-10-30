@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@boost-market/shared": ["../../packages/shared/src/index.ts"],
+      "@boost-market/ai": ["../../packages/ai/src/index.ts"],
+      "@boost-market/config": ["../../packages/config/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*"]
+}

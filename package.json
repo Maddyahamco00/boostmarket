@@ -1,0 +1,65 @@
+{
+  "name": "boost-market-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "dev:web": "next dev",
+    "dev:api": "tsx --tsconfig apps/api/tsconfig.json apps/api/src/main.ts",
+    "build": "npm run build:api && npm run build:web",
+    "build:api": "tsc -p apps/api/tsconfig.json --noEmit false",
+    "build:web": "next build",
+    "start": "next start",
+    "start:api": "node apps/api/dist/apps/api/src/main.js",
+    "test": "tsx --test 'tests/**/*.test.ts'",
+    "test:unit": "tsx --test 'tests/unit/**/*.test.ts' 'tests/sanity.test.ts'",
+    "test:integration": "tsx --test 'tests/integration/**/*.test.ts' 'tests/config.test.ts'",
+    "test:contract": "tsx --test 'tests/contract/**/*.test.ts'",
+    "test:e2e": "tsx --test 'tests/e2e/**/*.test.ts'",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "verify": "bun run typecheck && bun run lint && bun run test && NODE_ENV=production bun run build",
+    "clean": "next clean"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@hookform/resolvers": "^5.2.1",
+    "@nestjs/common": "^12.1.2",
+    "@nestjs/core": "^12.1.2",
+    "@nestjs/platform-express": "^12.1.2",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.553.0",
+    "motion": "^12.23.24",
+    "next": "^15.4.9",
+    "postcss": "^8.5.6",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.11",
+    "@tailwindcss/typography": "^0.5.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.0.8",
+    "firebase-tools": "^15.0.0",
+    "tailwindcss": "4.1.11",
+    "tsx": "^4.23.15",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": ["es2022"],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@boost-market/shared": ["packages/shared/src/index.ts"],
+      "@boost-market/shared/*": ["packages/shared/src/*"],
+      "@boost-market/ai": ["packages/ai/src/index.ts"],
+      "@boost-market/ai/*": ["packages/ai/src/*"],
+      "@boost-market/config": ["packages/config/src/index.ts"],
+      "@boost-market/config/*": ["packages/config/src/*"]
+    }
+  }
+}
